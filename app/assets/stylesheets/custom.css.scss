@@ -17,7 +17,10 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 40px;
+  /* background-image:url(image_path('bodyBackground.png')); */
+  
+  
 }
 
 section {
@@ -80,6 +83,8 @@ p {
     text-decoration: none;
   }
 }
+
+
 
 /* footer */
 
@@ -184,13 +189,9 @@ input {
 .posts {
   list-style: none;
   margin: 0;
-  li {
-    overflow: auto;
-    padding: 30px 0;
-    border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }
+  .onepost {
+    padding-bottom: 40px;
+	padding-top: 10px;
   }
   content {
     width: 95%;
