@@ -1,0 +1,33 @@
+<% provide(:title, 'About Us') %>
+<h1>About Us</h1>
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active">
+  	  <a href="#mission" data-toggle="tab">Mission</a>
+	</li>
+	<li>
+      <a href="#members" data-toggle="tab">Members</a>
+	</li>
+	<li>
+	  <a href="#partners" data-toggle="tab">Partners</a>
+	</li>
+	<li>
+	  <a href="#history" data-toggle="tab">History</a>
+	</li>
+  </ul>
+</div>
+<div class="tab-content">
+  <div class="tab-pane active" id="mission">
+    <%= render :partial => "mission" %>
+  </div>
+  <div class="tab-pane" id="members">
+    <%= render :partial => "members" %>
+  </div>
+  <div class="tab-pane" id="partners">
+    <%= render :partial => "partners" %>
+  </div>
+  <div class="tab-pane" id="history">
+    <%= render :partial => "history" %>
+  </div>
+  
+</div>

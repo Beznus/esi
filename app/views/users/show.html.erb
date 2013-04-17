@@ -1,0 +1,31 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+	</section>
+	<section>
+	  <h1>
+	    Beers Added
+	  </h1>
+	  <% if !@beers.nil? %>
+	    <%=render @beers %>
+	  <% else %>
+	    <p>No Beers Yet!</p>
+	  <% end %>
+    </section>
+	<section>
+	  <h1>
+	    Beers Reviewed
+	  </h1>
+	  <% if !@endorses.nil? %>
+	    <%=render @endorses  %>
+      <% else %>
+	    <p>No Reviews Yet!<p>
+	  <% end %>
+	</section>
+  </aside>
+</div>

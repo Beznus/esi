@@ -1,0 +1,39 @@
+<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+  <div class="carousel-inner">
+    <div class="item active"><!-- class of active since it's the first item -->
+      <%= link_to image_tag("SC2.png", alt: "Starcraft 2"), 'http://rubyonrails.org/http://esportsinitiative.com/2013/03/02/starcraft-ii-heart-of-the-swarm-tournament/' %>
+      <div class="carousel-caption">
+        <p>Click here for more info</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("11.jpg", alt: "First LAN") %>
+      <div class="carousel-caption">
+        <p>ESI at our first LAN!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("joinus.png", alt: "Want to join?") %>
+      <div class="carousel-caption">
+        <p>Interested in joining? Email esportsinitiative@gmail.com</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("esicomBanner.png", alt: "Gaming Info"), 'http://esportsinitiative.com/' %>
+      <div class="carousel-caption">
+        <p>For more information on tournaments and events!</p>
+      </div>
+    </div>
+  </div><!-- /.carousel-inner -->
+  <!--  Next and Previous controls below
+        href values must reference the id for this carousel -->
+    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
+
+<div class="center hero-unit">
+  <h1>E-Sports Initiative</h1>
+</div>
+
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
