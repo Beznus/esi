@@ -11,8 +11,10 @@
 #  created_by  :integer
 #
 
-require 'spec_helper'
-
-describe Posts do
-  pending "add some examples to (or delete) #{__FILE__}"
+class Post < ActiveRecord::Base
+  attr_accessible :title, :description, :tags
+  belongs_to :user
+  
+  validates :title, presence: true, length: { maximum: 75 }, uniqueness: true
+  validates :created_by, presence: true
 end

@@ -9,23 +9,13 @@
 	</section>
 	<section>
 	  <h1>
-	    Beers Added
+	    Posts Added
 	  </h1>
-	  <% if !@beers.nil? %>
-	    <%=render @beers %>
+	  <% if !@posts.nil? %>
+	    <%=render @posts %>
 	  <% else %>
-	    <p>No Beers Yet!</p>
+	    <p>No Posts Yet!</p>
 	  <% end %>
     </section>
-	<section>
-	  <h1>
-	    Beers Reviewed
-	  </h1>
-	  <% if !@endorses.nil? %>
-	    <%=render @endorses  %>
-      <% else %>
-	    <p>No Reviews Yet!<p>
-	  <% end %>
-	</section>
   </aside>
 </div>

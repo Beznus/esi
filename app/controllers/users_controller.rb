@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   
   def show
 	@user = User.find(params[:id])
-    @beers = Beer.find_by_created_by(params[:id])
-	@endorses = @user.endorses.find_by_user_id(params[:id])
+    @posts = Post.find_all_by_created_by(params[:id])
   end
   
   def new
@@ -21,7 +20,7 @@ class UsersController < ApplicationController
 	@user = User.new(params[:user])
 	if @user.save
 	  sign_in @user
-	  flash[:success] = "Welcome to the Sample App!"
+	  flash[:success] = "Welcome to the ESI Web App!"
 	  redirect_to @user
 	else
 	  render 'new'

@@ -33,7 +33,19 @@
 
 <div class="center hero-unit">
   <h1>E-Sports Initiative</h1>
+
+  
 </div>
-
-
+<ul>
+<% @posts.each do |post| %>
+  <li>
+    <h3>
+	  <%= link_to post.title, post %>
+	</h3>
+	<p>
+	  <%= post.description %>
+	</p>
+  </li>
+<% end %>
+</ul>
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

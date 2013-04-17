@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @posts = Post.find(:all, :limit => 3, :order => 'created_by DESC')
   end
 
   def help
