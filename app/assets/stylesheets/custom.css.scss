@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -8,6 +9,12 @@ $grayMediumLight: #eaeaea;
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
+}
+
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
 }
 
 /* universal */
@@ -192,6 +199,11 @@ input {
   .onepost {
     padding-bottom: 40px;
 	padding-top: 10px;
+	background: $grayLighter;
+	padding-left: 10px;
+	@include box_sizing;
+	@include rounded-corners(5px);
+	margin-bottom: 10px;
   }
   content {
     width: 95%;
@@ -205,6 +217,8 @@ input {
 	margin-bottom: 20px;
   }
 }
+  
+
 /* miscellaneous */
 
 .debug_dump {

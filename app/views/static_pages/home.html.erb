@@ -41,12 +41,15 @@
 <div class="posts" style="padding-top:20px;">
   <% @posts.each do |post| %>
     <div class="row-fluid onepost">
-    <div class="span4">
+    <div class="span4 post-header">
       <h3>
 	    <%= link_to post.title, post %>
 	  </h3>
+	  <h5>
+	    <%= post.created_at %>
+	  </h5>
 	</div>
-	<div class="span8">
+	<div class="span8 post-content">
 	  <p>
 	    <%= post.description %>
 	  </p>
@@ -54,4 +57,3 @@
 	</div>
   <% end %>
 </div>
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
