@@ -2,3 +2,5 @@
     | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
   <% end %>
+
+/*UserMailer.welcome_email(@user).deliver*/
