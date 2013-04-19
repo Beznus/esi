@@ -43,6 +43,14 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  margin-right: auto;
+  margin_left: auto;
+  float: none;
 }
 
 /* typography */
@@ -196,6 +204,7 @@ input {
 .posts {
   list-style: none;
   margin: 0;
+  
   .onepost {
     padding-bottom: 40px;
 	padding-top: 10px;
@@ -204,17 +213,10 @@ input {
 	@include box_sizing;
 	@include rounded-corners(5px);
 	margin-bottom: 10px;
+	@include box-shadow(5px);
   }
-  content {
-    width: 95%;
-	margin: 0px auto;
-	padding: 9px 9px 9px 9px;
-	background: white;
-	box-shadow: 3px 3px 3px #888;
-	border: Solid 1px #FFFFFF;
-	float: left;
-	border-radius: 5px;
-	margin-bottom: 20px;
+  .post-header {
+	border-right: 1px dashed $grayLight;
   }
 }
   

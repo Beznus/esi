@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
   end
   
   def contact
+    @contact
   end
   
   def show_mission
