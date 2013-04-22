@@ -219,7 +219,22 @@ input {
 	border-right: 1px dashed $grayLight;
   }
 }
-  
+
+/* Static Pages */
+
+.picture-frame {
+  margin: 50px;
+  text-align: center;
+}  
+
+.partners {
+  text-align: center;
+  h3 {
+    @include rounded-corners(5px);
+    background: $grayLighter;
+	padding: 25px;
+  }
+}
 
 /* miscellaneous */
 
