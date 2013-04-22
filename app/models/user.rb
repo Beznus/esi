@@ -10,10 +10,11 @@
 #  password_digest :string(255)
 #  remember_token  :string(255)
 #  admin           :boolean          default(FALSE)
+#  server_code     :string(255)
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :server_code
   has_secure_password
   has_many :posts
 
@@ -27,10 +28,13 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  VALID_SERVER_CODE_REGEX = /\A(some-string)/i
+  validates :server_code, format: { with: VALID_SERVER_CODE_REGEX } 
   
   private
   
     def create_remember_token
 	  self.remember_token = SecureRandom.urlsafe_base64
 	end
+	
 end

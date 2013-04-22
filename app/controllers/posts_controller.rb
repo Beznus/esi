@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_filter :signed_in_user, only: [:edit, :update, :destroy, :index]
   before_filter :correct_user, :admin_user,  only: [:edit, :update]
-  before_filter :admin_user, only: :destroy
   
   def show
 	@post = Post.find(params[:id])
@@ -34,6 +33,9 @@ class PostsController < ApplicationController
   end
   
   def destroy
+    Post.find(params[:id]).destroy
+    flash[:success] = "Post destroyed."
+    redirect_to posts_url
   end
  
   private

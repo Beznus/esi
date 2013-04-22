@@ -3,8 +3,13 @@
   <h3>
     <%= link_to post.title, post %>
   </h3>
+  <div class="btn-mini" style="float:right;">
+  <%= link_to "delete", post, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  </div>
   <p>
     <%= post.description %>
   <p>
+    
   </div>
 </li>
