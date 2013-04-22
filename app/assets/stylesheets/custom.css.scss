@@ -1,9 +1,25 @@
 @import "bootstrap";
 
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+ 
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+ 
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+ 
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+ 
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -62,7 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -155,6 +170,20 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+/* Title */
+
+.title {
+  padding: 50px;
+  @include gradient($green, $blue);
+  h1 {
+    color: $white;
+  }
+  .pattern {
+    background-image: url(image_path('pattern2.png'));
+	z-index: 500;
+  }
 }
 
 /* forms */
