@@ -176,13 +176,12 @@ aside {
 
 .title {
   padding: 50px;
-  @include gradient($green, $blue);
+  /*@include gradient($green, $blue);*/
   h1 {
-    color: $white;
+    /*color: $white;*/
   }
   .pattern {
     background-image: url(image_path('pattern2.png'));
-	z-index: 500;
   }
 }
 
@@ -263,6 +262,17 @@ input {
     background: $grayLighter;
 	padding: 25px;
   }
+}
+
+.members {
+  p {
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 30px;
+  }
+
 }
 
 /* miscellaneous */
