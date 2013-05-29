@@ -106,7 +106,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  /*padding-top: 9px;*/
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -185,10 +185,8 @@ aside {
     letter-spacing: 4px;
 	text-align: center;
   }
-  .pattern {
-    background-image: url(image_path('pattern2.png'));
-  }
 }
+
 
 /* forms */
 
