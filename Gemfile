@@ -10,6 +10,8 @@ gem 'faker', '1.0.1'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pg'
+gem 'devise'
+gem 'forem', :git => "git://github.com/radar/forem.git"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,6 +32,7 @@ end
 group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
+  gem 'zurb-foundation', '~> 2.2'
   
   
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
